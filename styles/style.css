@@ -1,41 +1,106 @@
+/*Settup a colour scheme, useful as im changing it a lot*/
+:root {
+  --primary: #53A962;
+  --secondary: #DEE381;
+  --dark: #202020;
+  --light: whitesmoke;
+}
+
+
+/************************************************************/
+/* General Setup */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   font-size: 10px;
   font-family: 'Open Sans', sans-serif;
-}
-
-
-h1 {
-  font-size: 60px;
-  text-align: center;
-}
-
-p, li {
-  font-size: 16px;
-  line-height: 2;
-  letter-spacing: 1px;
-}
-
-
-html {
-  background-color: #00539F;
+  /*-color: var(--light);*/
+  background: linear-gradient(to left bottom, var(--primary), var(--secondary)  );
+  min-height: 100%;
+  
 }
 
 body {
-  width: 600px;
+  width: 100%;
   margin: 0 auto;
-  background-color: #FF9500;
-  padding: 0 20px 20px 20px;
-  border: 5px solid black;
+}
+
+h1, h2, h3, p, li {
+  font-family: 'Opem Sans', sans-serif;
+  color: var(--dark);
 }
 
 h1 {
-  margin: 0;
-  padding: 20px 0;
-  color: #00539F;
-  text-shadow: 3px 3px 1px black;
+  font-size: 6rem;
+  text-align: center;
 }
 
-img {
+h2 {
+  font-size: 4rem;
+  text-align: left;
+  margin: 0;
+  padding: 20px 20px;
+  color: var(--dark);
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+p, li {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+
+/************************************************************/
+/* CSS for Top Navigation Bar */
+/* Add a black background color to the top navigation */
+
+nav > ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark);
+  overflow: hidden;
+}
+
+nav > ul > li {
+  float: left;
+}
+
+/* Style the links inside the navigation bar */
+nav > ul > li a {
   display: block;
+  color: var(--light);
+  text-align: center;
+  margin: 0;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+}
+
+/* Change the color of links on hover */
+nav > ul > li a:hover {
+  background-color: var(--secondary);
+  color: var(--dark);
+}
+
+/* Add a color to the active/current link */
+nav > ul > li a.active {
+  background-color: var(--primary);
+  color: var(--light);
+}
+
+
+/************************************************************/
+/* Style the main section*/
+
+main{
+  width: 70%;
   margin: 0 auto;
+  padding: 0;
 }
